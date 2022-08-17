@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  server:
+    build:
+      context: .
+      dockerfile: server.Dockerfile
+    volumes:
+      - ./:/test
+    working_dir: /test
+    ports:
+      - 8050:8050
+      - 8888:8888

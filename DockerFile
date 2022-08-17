@@ -1,0 +1,7 @@
+FROM python:3.10.6-buster
+
+RUN python -m pip install pandas dash jupyter-dash
+
+COPY server.py .
+
+ENTRYPOINT ["python", "server.py"]
