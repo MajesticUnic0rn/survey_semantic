@@ -4,7 +4,7 @@ from autocorrect import spell # autocorrect information
 import spacy # might useless - but is a useful package to implement < - 
 from tqdm.auto import tqdm
 import helper
-from helper import *
+from helper import * #problematic for import all - but most of the functions I use within?
 from classifier import TopicClassifier
 import argparse
 
