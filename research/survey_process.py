@@ -8,7 +8,6 @@ from helper import *
 from classifier import TopicClassifier
 
 
-#tqdm.pandas()
 
 #make it args based script - input csv - then output csv location
 input_survey=pd.read_csv('../data/WebsiteSatisfaction.csv')
@@ -32,5 +31,8 @@ tags = ["User Experience", "customer service", "equipment availability",
 zero_shot=TopicClassifier(tags) #model init first time is ruff.
 input_processed["topic"] = input_processed['Comments_spell_checked'].apply(zero_shot.top_prediction)
 input_survey.to_csv('../data/cleaned_survey.csv')
+
+
+
 
 
