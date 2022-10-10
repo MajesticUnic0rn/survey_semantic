@@ -159,8 +159,7 @@ def main():
             all_models = []
             scoring = 'accuracy'
             for (name, model) in models:
-                kfold = model_selection.KFold(n_splits=10,  
-                        random_state=seed)
+                kfold = model_selection.KFold(n_splits=10,)
                 cv_results = model_selection.cross_val_score(model, X,
                         Y, cv=kfold, scoring=scoring)
                 model_names.append(name)
@@ -180,7 +179,7 @@ def main():
                 st.json(all_models)
 
     elif choice == 'About':
-        print('maintain by chris, prob other better apps so idk')
+        st.write('maintain by chris, prob other better apps so idk')
 
 
 if __name__ == '__main__':
