@@ -16,7 +16,7 @@ import plotly.express as px
 
 
 def main():
-    activities = ['Visualize', 'Plots', 'Model Building', 'About']
+    activities = ['Visualize']
     choice = st.sidebar.selectbox('Select Activities', activities)
     
     if choice == 'Visualize':
@@ -63,7 +63,7 @@ def main():
                 st.write(all_columns)
 
             if st.checkbox('Summary'):
-                st.write(dinput_surveyf.describe())
+                st.write(input_survey.describe())
 
             if st.checkbox('Show Selected Columns'):
                 selected_columns = st.multiselect('Select Columns',

@@ -56,6 +56,7 @@ def polarity_check(input_str):
 def sentiment_check(input_str):
     return TextBlob(input_str).sentiment
 
-#throw exception if .pipe has missing column to exit out
+#throw exception if .pipe has missing column to exit out schema checker on required fields that needs to be inside >
 def column_check():
     return True
+

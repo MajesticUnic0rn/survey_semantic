@@ -19,7 +19,6 @@ def get_custom_logger():
     logger.setLevel(logging.INFO)
     return logger
 
-
 class CustomFormatter(logging.Formatter):
 
     grey = "\x1b[38;20m"
