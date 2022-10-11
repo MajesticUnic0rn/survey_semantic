@@ -46,10 +46,10 @@ def main():
                 sentiment_chart=input_survey.groupby('topic').size()
                 fig = px.pie(values=sentiment_chart,names=sentiment_chart.index,title='Topic Modeling Count Overall')
                 st.plotly_chart(fig, use_container_width=True)
-
+                st.write('Topic Modeling Crosstab with Sentiment')
                 topic_graph=pd.crosstab(input_survey.topic, input_survey.Sentiment ,normalize = 'index')
                 topic_graph.reset_index(inplace=True)
-                fig = px.bar(topic_graph, x="topic", y=["Neutral", "Mixed","Positive" ,"Negative"], title="Wide-Form Input")
+                fig = px.bar(topic_graph, x="topic", y=["Neutral", "Mixed","Positive" ,"Negative"])
                 st.plotly_chart(fig, use_container_width=True)
             
             mean_nps_time=input_survey.groupby('ActivityCompleted').mean()
