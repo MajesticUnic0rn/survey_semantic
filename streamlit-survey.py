@@ -27,7 +27,6 @@ def main():
         filtered_df = df_filter('Move Sliders To Filter Time',input_survey)
         input_survey = filtered_df
     
-
         #TODO data schema checker to throw error
         if input_survey is not None: #if statement not needed if hard coded data file location
     
@@ -84,7 +83,7 @@ def main():
             if st.checkbox('Summary'):
                 st.write(input_survey.describe())
 
-def df_filter(message,df):
+def df_filter(message,df): #pray to god that your first in the index is a date time index column
 
         slider_1, slider_2 = st.slider('%s' % (message),0,len(df)-1,[0,len(df)-1],1)
 
