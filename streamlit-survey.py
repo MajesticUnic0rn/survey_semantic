@@ -22,10 +22,10 @@ def main():
         st.subheader('Visualize Survey Results')
         #data = st.file_uploader('Upload a Dataset', type=['csv', 'txt'])
         data = 'data/cleaned_data.csv'
+        input_survey = pd.read_csv(data)
         #TODO data schema checker to throw error
-        if data is not None:
-            input_survey = pd.read_csv(data)
-            
+        if input_survey is not None: #if statement not needed if hard coded data file location
+
             col1, col2= st.columns(2)   
 
             with col1:
