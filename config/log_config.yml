@@ -29,7 +29,7 @@ handlers:
     level: 'INFO'
     class: 'logging.handlers.WatchedFileHandler'
     formatter: 'verbose'
-    filename: '/tmp/On_Rent_Time_Series.log'
+    filename: 'survey_debug.log'
     mode: 'a'
     encoding: 'utf-8'
   # uncomment bottom if you are registering error level logs to be emailed back to devs
