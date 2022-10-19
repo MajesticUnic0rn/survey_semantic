@@ -57,7 +57,7 @@ def main():
             [go.Scatter(x=mean_nps_time.index, y=mean_nps_time['nps_score'])],
             layout=go.Layout(
             title=go.layout.Title(text="Average Satisfaction Score")
-                    )  
+                    )
                 )
             st.plotly_chart(fig, use_container_width=True)
             

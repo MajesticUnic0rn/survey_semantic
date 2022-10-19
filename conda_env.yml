@@ -1,0 +1,10 @@
+name: streamlit_survey
+dependencies:
+  - pip
+  - pip:
+    - streamlit
+    - pandas
+    - numpy
+    - seaborn
+    - matplotlib
+    - plotly
